@@ -1,0 +1,62 @@
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <img src="./assets/img/bank.png" class="logo">
+            <h1 style="text-align: center; color: rgb(27, 67, 176);">
+                <Strong>SAFENET</Strong>
+            </h1>
+            <!-- <li class="sidebar-brand">
+                  SafeNet
+            </li> -->
+            <li class="line">
+
+            </li>
+            <li>
+                <a routerLink="home">Home</a>
+            </li>
+            <li>
+                <a routerLink="my_bank">My Bank</a>
+            </li>
+            <li>
+                <a routerLink="transaction">Payment Transfer</a>
+            </li>
+            <li>
+                <a routerLink="history">Transaction History</a>
+            </li>
+            <li>
+                <a routerLink="bank_account">Bank Account</a>
+            </li>
+            <li>
+                <a routerLink="dashboard">Setting</a>
+            </li>
+            <li>
+                <a routerLink="contact">Contact</a>
+            </li>
+            <li class="line">
+
+            </li>
+            <li>
+                <div class="container">
+                    <button class="btn1" routerLink="profile">
+                </button>
+                    <!-- <h3>{{email}}</h3> call user email vao day -->
+                    <h6 style="line-height: 30px;">Logout</h6>
+                    <button class="btn2" (click)="logout()">
+                  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="logout" ></mat-icon>
+                 </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->

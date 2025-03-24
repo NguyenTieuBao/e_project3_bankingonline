@@ -1,0 +1,64 @@
+<div class="container p-0">
+    <h1 class="h3 mb-3">Settings</h1>
+    <div class="row">
+        <div class="col-md-5 col-xl-4">
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Profile Settings</h5>
+                </div>
+
+                <div class="list-group list-group-flush" role="tablist">
+
+                    <a class="list-group-item list-group-item-action" href="#password">
+                      Changed Password
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7 col-xl-8">
+            <div class="tab-content">
+
+                <div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Password</h5>
+
+                            <form [formGroup]="changedPass" (ngSubmit)="onClick()">
+                                <div class="form-group">
+                                    <label for="inputPasswordCurrent">Current password</label>
+                                    <input formControlName="passwordCurrent" type="password" class="form-control" id="inputPasswordCurrent">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPasswordNew">New password</label>
+                                    <input formControlName="passwordNew" type="password" class="form-control" id="inputPasswordNew">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPasswordNew2">Verify password</label>
+                                    <input formControlName="passwordVerify" type="password" class="form-control" id="inputPasswordNew2">
+                                </div>
+                                <!-- <br>
+                                <div class="form-control d-flex justify-content-between align-items-center">
+
+                                    <label for="inputPasswordNew2">OTP Code</label>
+                                    <input type="password" class="form-control mx-2" id="inputPasswordNew2">
+
+                                    <button type="submit" class="btn btn-primary">Send Otp</button>
+                                </div> -->
+                                <!-- <br> -->
+
+                                <br>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

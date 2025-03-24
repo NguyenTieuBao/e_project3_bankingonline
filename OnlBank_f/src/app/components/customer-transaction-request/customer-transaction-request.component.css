@@ -1,0 +1,10 @@
+.activity-request {
+    border-radius: 5px;
+    background-color: #f0f8ff; /* AliceBlue */
+    border: 1px solid #d1ecf1;
+    margin-bottom: 10px;
+  
+    &:hover {
+      background-color: #e1f5fe; /* LightBlue */
+    }
+  }

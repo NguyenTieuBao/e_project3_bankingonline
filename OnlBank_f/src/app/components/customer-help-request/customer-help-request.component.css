@@ -1,0 +1,19 @@
+.help-request {
+    border-radius: 5px;
+    background-color: #fff3cd; /* Light Yellow */
+    border: 1px solid #ffeeba;
+  
+    .card-body {
+      color: #856404;
+    }
+  
+    .btn-outline-primary {
+      border-color: #856404;
+      color: #856404;
+  
+      &:hover {
+        background-color: #856404;
+        color: #fff;
+      }
+    }
+  }

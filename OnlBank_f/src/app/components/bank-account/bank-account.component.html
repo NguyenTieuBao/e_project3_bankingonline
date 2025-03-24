@@ -1,0 +1,30 @@
+<h1>
+    <STRONG>My Bank Accounts</STRONG>
+</h1>
+<h5>Effortlessly manage your banking activities</h5>
+<br>
+<!-- card.component.html -->
+<div class="container">
+    <div class="row" *ngIf="allAccount.length > 0; else noAccount">
+        <div *ngFor="let item of allAccount; let i = index" class="col-md-4">
+            <div class="card mb-3 rounded">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <h5 class="card-title">{{ fullname }}</h5>
+                            <h6 class="card-subtitle mb-2">Balance {{ item.balance }}</h6>
+                        </div>
+                        <a [routerLink]="['/another-page', item.id]" class="btn btn-outline-light">Go</a>
+                    </div>
+                    <div class="mt-4">
+                        <span>Created Date: {{ item.createAt }}</span>
+                        <p class="card-text mt-2">Number: {{ item.accountNumber }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #noAccount>
+    <p>Không có tài khoản nào được tìm thấy.</p>
+</ng-template>

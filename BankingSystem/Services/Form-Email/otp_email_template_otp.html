@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Email</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .header a {
+            font-size: 1.4em;
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .content {
+            line-height: 1.8;
+        }
+        
+        .otp {
+            background: linear-gradient(to right, #00bc69 0%, #00bc88 50%, #00bca8 100%);
+            margin: 20px auto;
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 4px;
+            display: inline-block;
+            font-size: 1.5em;
+        }
+        
+        .footer {
+            color: #aaa;
+            font-size: 0.8em;
+            margin-top: 20px;
+        }
+        
+        .email-info {
+            color: #666;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 18px;
+            margin-top: 20px;
+        }
+        
+        .email-info a {
+            text-decoration: none;
+            color: #00bc69;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a>Prove Your Identity</a>
+        </div>
+        <div class="content">
+            <p><strong>Dear [Recipient Name],</strong></p>
+            <p>
+                We have received a login request for your account. For security purposes, please verify your identity by providing the following One-Time Password (OTP).
+            </p>
+            <p><b>Your One-Time Password (OTP) verification code is:</b></p>
+            <div class="otp">{{OTP_CODE}}</div>
+            <p style="font-size: 0.9em">
+                <strong>One-Time Password (OTP) is valid for 5 minutes.</strong><br><br> If you did not initiate this login request, please disregard this message. Please ensure the confidentiality of your OTP and do not share it with anyone.<br>
+                <strong>Do not forward or give this code to anyone.</strong><br><br>
+                <strong>Thank you for using our service.</strong>
+            </p>
+        </div>
+        <div class="footer">
+            <hr style="border: none; border-top: 0.5px solid #131111">
+            <p>This email can't receive replies.</p>
+            <p>
+                For more information about our services and your account, visit our website.
+            </p>
+        </div>
+    </div>
+    <div style="text-align: center">
+        <div class="email-info">
+            <span>
+                This email was sent to
+                <a href="mailto:{Email Address}">{Email Address}</a>
+            </span>
+        </div>
+        <div class="email-info">
+            <a href="/">Our Company</a> | Address | City - Zip Code, Country
+        </div>
+        <div class="email-info">
+            &copy; 2024 Our Company. All rights reserved.
+        </div>
+    </div>
+</body>
+
+</html>

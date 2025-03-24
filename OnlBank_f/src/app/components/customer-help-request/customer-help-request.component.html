@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <div class="row">
+      <div *ngFor="let request of requests" class="col-md-4">
+        <div class="card mb-3 help-request">
+          <div class="card-body">
+            <h5 class="card-title">{{ request.title }}</h5>
+            <p class="card-text">{{ request.description }}</p>
+            <small>Request ID: {{ request.id }}</small>
+            <a href="#" class="btn btn-outline-primary mt-2">View Request</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

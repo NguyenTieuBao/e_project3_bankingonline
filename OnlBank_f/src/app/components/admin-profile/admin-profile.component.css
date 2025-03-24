@@ -1,0 +1,8 @@
+.box{
+    width: 240px;
+    height: 1000px;
+}
+.img-thumbnail {
+    max-width: 100%;
+    height: auto;
+  }

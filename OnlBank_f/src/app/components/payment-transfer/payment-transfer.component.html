@@ -1,0 +1,58 @@
+<h1><strong>Payment Transfer</strong></h1>
+<h5>Fast and easy to transfer your money with just a simple act</h5>
+<div style="border-bottom: 1px dotted rgb(13, 135, 162); margin-top: 30px; margin-bottom: -10px;"></div>
+<br>
+<form [formGroup]="transferForm" (ngSubmit)="onTransfer()">
+    <div class="form-group">
+        <div>
+            <h4><b>Transfer Details</b></h4>
+            <h6>Enter details for the recipient</h6>
+        </div>
+        <div style="padding: 10px; border-radius: 25px; border: 3px solid rgb(13, 135, 162)">
+            <div>
+                <div class="input-group mb-3">
+                    <select class="form-select" aria-label="Default select example" formControlName="fromAccount" required>
+            <option value="" disabled selected>Open this select menu</option>
+            <option *ngFor="let item of allAccount" [value]="item.accountNumber">{{item.accountNumber}}</option>
+          </select>
+                </div>
+                <div class="text-danger">
+                    <span *ngIf="transferForm.controls['fromAccount']?.errors?.['required']">This is an invalid value</span>
+                </div>
+            </div>
+            <div>
+                <h5>Transfer Note </h5>
+                <p>Write something for the other person</p>
+                <textarea class="form-control" id="cmt" style="width: 100%;" formControlName="status" required></textarea>
+            </div>
+        </div>
+        <div>
+            <h4><b>Bank Account Details</b></h4>
+            <h6>Enter the bank account details for the recipient</h6>
+        </div>
+        <div style="padding: 10px; border-radius: 25px; border: 3px solid rgb(13, 135, 162)">
+            <div>
+                <h5>Account Number</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" formControlName="toAccount" name="toAccount" placeholder="Account Number" aria-label="Recipient's Email" aria-describedby="basic-addon2" required>
+                </div>
+                <div class="text-danger">
+                    <span *ngIf="transferForm.controls['toAccount'].errors?.['required']">This is an invalid value</span>
+                </div>
+                <button type="button" class="btn btn-primary" (click)="getFullName()">Get Full Name</button>
+            </div>
+            <div *ngIf="fullName">
+                <h6>Full Name: {{ fullName }}</h6>
+            </div>
+            <div>
+                <h5>Amount</h5>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="$.00" formControlName="amount" required>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="form-control" style="margin: 30px 0; background-color: rgb(13, 135, 162); color: white; border: 2px solid cyan">Submit</button>
+    </div>
+</form>
+
+<router-outlet></router-outlet>
